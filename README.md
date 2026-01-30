@@ -1,4 +1,4 @@
-# 🌊 Era Koleji - İnteraktif Eğitim Platformu
+# 🌊 Era Koleji - İnteraktif Eğitim Platformu 
 
 <div align="center">
   <img src="public/images/era.jpg" alt="Era Koleji Logo" width="400"/>
