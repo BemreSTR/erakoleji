@@ -3,9 +3,9 @@ import { getGrades, getGradeById, getUnitById } from './data';
 import type { Video, Unit, Grade } from './types';
 
 // Login Constants
-const VALID_EMAIL = 'okyanuskoleji@gmail.com';
-const VALID_PASSWORD = 'okyanuskoleji1';
-const LOGIN_SESSION_KEY = 'okyanuskoleji_logged_in';
+const VALID_EMAIL = 'erakoleji@gmail.com';
+const VALID_PASSWORD = 'erakoleji1';
+const LOGIN_SESSION_KEY = 'erakoleji_logged_in';
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,22 +77,22 @@ async function updateVisitorCount(): Promise<void> {
 
   // Eğer bu oturumda zaten artırıldıysa, sadece göster
   if (hasIncrementedThisSession) {
-    const stored = localStorage.getItem('okyanuskoleji_visits');
+    const stored = localStorage.getItem('erakoleji_visits');
     if (stored) counterElement.textContent = parseInt(stored).toLocaleString('tr-TR');
     return;
   }
 
   try {
     // CounterAPI.dev - CORS destekli ve JSON döner
-    const response = await fetch('https://api.counterapi.dev/v1/okyanuskoleji-website/visits/up');
+    const response = await fetch('https://api.counterapi.dev/v1/erakoleji-website/visits/up');
     const data = await response.json();
     const count = data.count || 0;
     counterElement.textContent = count.toLocaleString('tr-TR');
-    localStorage.setItem('okyanuskoleji_visits', count.toString());
+    localStorage.setItem('erakoleji_visits', count.toString());
     hasIncrementedThisSession = true;
   } catch (error) {
     // API başarısız olursa localStorage'dan göster
-    const stored = localStorage.getItem('okyanuskoleji_visits');
+    const stored = localStorage.getItem('erakoleji_visits');
     counterElement.textContent = stored ? parseInt(stored).toLocaleString('tr-TR') : '0';
   }
 }
@@ -116,7 +116,7 @@ function createVideoCard(video: Video): string {
   // Base URL'i dikkate alarak link oluştur
   let materialUrl = null;
   if(video.materialUrl) {
-    const baseUrl = import.meta.env.BASE_URL; // e.g., '/okyanuskoleji/' or '/'
+    const baseUrl = import.meta.env.BASE_URL; // e.g., '/erakoleji/' or '/'
     const cleanMaterialPath = video.materialUrl.startsWith('/') ? video.materialUrl.substring(1) : video.materialUrl;
     materialUrl = escapeHTML(baseUrl + cleanMaterialPath);
   }
@@ -171,8 +171,8 @@ async function renderHomePage(): Promise<string> {
     ${createVisitorCounter()}
     <header class="header">
       <div class="header-content">
-        <h1 class="logo">OKYANUS KOLEJİ</h1>
-        <img src="${import.meta.env.BASE_URL}images/okyanus.jpg" alt="Okyanus Koleji Banner" class="header-banner" />
+        <h1 class="logo">ERA KOLEJİ</h1>
+        <img src="${import.meta.env.BASE_URL}images/era.jpg" alt="Era Koleji Banner" class="header-banner" />
         <p class="tagline">İnteraktif konu anlatımları, eğlenceli etkinlikler ve <br> dijital öğrenme materyalleri</p>
       </div>
     </header>
@@ -183,7 +183,7 @@ async function renderHomePage(): Promise<string> {
       </div>
     </main>
     <footer class="footer">
-      <p class="footer-text">© ${new Date().getFullYear()} OKYANUS KOLEJİ</p>
+      <p class="footer-text">© ${new Date().getFullYear()} ERA KOLEJİ</p>
     </footer>
   `;
 }
@@ -217,7 +217,7 @@ async function renderUnitsPage(grade: Grade): Promise<string> {
       </div>
     </main>
     <footer class="footer">
-      <p class="footer-text">© ${new Date().getFullYear()} OKYANUS KOLEJİ</p>
+      <p class="footer-text">© ${new Date().getFullYear()} ERA KOLEJİ</p>
     </footer>
   `;
 }
@@ -248,7 +248,7 @@ async function renderVideosPage(grade: Grade, unit: Unit): Promise<string> {
       </div>
     </main>
     <footer class="footer">
-      <p class="footer-text">© ${new Date().getFullYear()} OKYANUS KOLEJİ</p>
+      <p class="footer-text">© ${new Date().getFullYear()} ERA KOLEJİ</p>
     </footer>
   `;
 }

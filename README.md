@@ -1,11 +1,11 @@
-# 🌊 Okyanus Koleji - İnteraktif Eğitim Platformu
+# 🌊 Era Koleji - İnteraktif Eğitim Platformu
 
 <div align="center">
-  <img src="public/images/okyanus.jpg" alt="Okyanus Koleji Logo" width="400"/>
+  <img src="public/images/era.jpg" alt="Era Koleji Logo" width="400"/>
   
-  ### Okyanus Koleji Okulları İçin İnteraktif Eğitim Materyalleri
+  ### Era Koleji Okulları İçin İnteraktif Eğitim Materyalleri
   
-  [![Okyanus Koleji](https://img.shields.io/badge/Okyanus-Koleji-blue)](https://www.okyanuskoleji.k12.tr/)
+  [![Era Koleji](https://img.shields.io/badge/Era-Koleji-blue)](https://www.erakoleji.k12.tr/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org/)
   [![Vite](https://img.shields.io/badge/Vite-7.2-646CFF)](https://vitejs.dev/)
   
@@ -15,7 +15,7 @@
 
 ## 📖 Hakkında
 
-Bu proje, **Okyanus Koleji** öğrencileri için özel olarak geliştirilmiş bir dijital eğitim platformudur. Platformun temel amacı, ders anlatımlarını statik videolardan çıkarıp, öğrencinin aktif olarak katılabileceği HTML5 tabanlı **interaktif eğitim materyalleri** ile zenginleştirmektir.
+Bu proje, **Era Koleji** öğrencileri için özel olarak geliştirilmiş bir dijital eğitim platformudur. Platformun temel amacı, ders anlatımlarını statik videolardan çıkarıp, öğrencinin aktif olarak katılabileceği HTML5 tabanlı **interaktif eğitim materyalleri** ile zenginleştirmektir.
 
 Platform üzerinden öğrenciler, sınıf ve tema bazında ayrıştırılmış konulara ulaşabilir ve her konu için özel olarak hazırlanmış interaktif "Yapalım Öğrenelim" etkinliklerini, oyunları ve testleri uygulayabilirler.
 
@@ -77,8 +77,8 @@ Projeyi yerel bilgisayarınızda çalıştırmak için:
 
 1. **Repoyu indirin:**
    ```bash
-   git clone https://github.com/BemreSTR/okyanuskoleji.git
-   cd okyanuskoleji
+   git clone https://github.com/BemreSTR/erakoleji.git
+   cd erakoleji
    ```
 
 2. **Gerekli paketleri yükleyin:**
